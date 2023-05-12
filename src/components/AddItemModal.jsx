@@ -6,30 +6,19 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../store/actions';
 
-/**
- * Modal component for adding items
- * @param {Object} props - Component props
- * @param {Function} props.closeModal - Function to close the modal
- * @returns {JSX.Element} Modal component
- */
+
 const AddItemModal = ({ closeModal }) => {
     const [itemName, setItemName] = useState('');
     const dispatch = useDispatch();
 
-    /**
-     * Handles form submission to add a new item
-     * @param {Object} e - Form event
-     */
+
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(addItem(itemName));
         closeModal();
     };
 
-    /**
-     * Handles input change
-     * @param {Object} e - Input change event
-     */
+
     const handleInputChange = (e) => {
         setItemName(e.target.value);
     };

@@ -12,12 +12,7 @@ const initialState = {
     filteredItems: [],
 };
 
-/**
- * Reducer function to handle state updates based on dispatched actions
- * @param {Object} state - Current state
- * @param {Object} action - Dispatched action
- * @returns {Object} Updated state
- */
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEM':

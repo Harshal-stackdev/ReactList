@@ -9,10 +9,7 @@ import ItemList from './components/ItemList';
 import SearchBar from './components/SearchBar';
 import store from './store/store';
 
-/**
- * Main App component
- * @returns {JSX.Element} App component
- */
+
 const App = () => {
   const [showModal, setShowModal] = React.useState(false);
 
